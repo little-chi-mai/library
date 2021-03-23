@@ -20,12 +20,22 @@
 console.log("Hello from the console");
 
 const raindrops = function( number ) {
-    // we declare a variable and give it a meaningful name of output to track our expecting output; Also I'll give it an initial value of an empty string.
+    // we declare a variable and give it a meaningful name of output to track our expecting output; 
+    // Also I'll give it an initial value of an empty string.
     let output = "";
 
-    // 
-    if ( number % 3 === 0 ) { // modulo returns the remainder of a division
-        output = output + 'Pling'; // initialising our output variable to be an empty string
+    // Let check the first condition.
+    // To check whether 3 is a factor of a number, we use a operator called modulo. 
+    // It returns the remainder of a division.
+    // So if the remainder equal to 0, 3 is a factor of that number.
+    // and if the remainder is not equal to 0, 3 is not a factor.
+    // The symbol of modulo in JS is %
+
+    // We will write an if statement that check if the number modulo 3 equal to 0 
+    // The three equal signs is called strict equality, Joel will talk about it later in the session.
+
+    if ( number % 3 === 0 ) { 
+        output = output + 'Pling'; 
     }
 
     if ( number % 5 === 0 ) {
