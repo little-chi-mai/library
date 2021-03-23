@@ -2,7 +2,7 @@
 
 // ## Warmup - Raindrops
 
-// Write a Javascript program that will take a number (eg 28 or 1755 or 9, etc) and output the following:
+// Write a Javascript program that will accept a number (eg 28 or 1755 or 9, etc) and output based on the following conditions:
 
 // - If the number contains 3 as a factor, output 'Pling'.
 // - If the number contains 5 as a factor, output 'Plang'.
@@ -20,9 +20,11 @@
 console.log("Hello from the console");
 
 const raindrops = function( number ) {
+    // we declare a variable and give it a meaningful name of output to track our expecting output; Also I'll give it an initial value of an empty string.
     let output = "";
 
-    if ( number % 3 === 0 ) {
+    // 
+    if ( number % 3 === 0 ) { // modulo returns the remainder of a division
         output = output + 'Pling'; // initialising our output variable to be an empty string
     }
 
@@ -35,7 +37,8 @@ const raindrops = function( number ) {
     }
 
     if ( output.length === 0 ) {
-        output = output + number;
+        // output = output + number; 
+        output = number.toString();
     }
 
     return output;
