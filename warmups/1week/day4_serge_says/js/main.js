@@ -17,6 +17,7 @@ const sergeSays = function( message ) {
     // let response = "";
 
     if ( message.endsWith('?') ) {
+    // if ( message[message.length - 1] === '?' ) {
         // response = 'Sure';
         return 'Sure';
     } else if ( message === "" ) {
