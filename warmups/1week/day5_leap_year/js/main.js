@@ -102,29 +102,34 @@
 // Except if it is evenly divisible by 100...
 // Unless it is also divisible by 400
 
-
-// const isLeapYear = function (year) {
-//     // Every year that is evenly divisible by 4
-//     // Except if it is evenly divisible by 100...
-//     // Unless it is also divisible by 400
-
-//     if (year % 400 === 0) {
-//         return true;
-//     } else if (year % 100 === 0) {
-//         return false;
-//     } else if (year % 4 === 0) {
-//         return true;
-//     } else {
-//         return false;
-//     }
-// }
+// const year = Number(prompt('Which year you want to check whether it is a leap year?'))
 
 const isLeapYear = function (year) {
-    return (year % 4 === 0) && ( (year % 100 !== 0) || (year % 400 === 0) );
+    // Every year that is evenly divisible by 4
+    // Except if it is evenly divisible by 100...
+    // Unless it is also divisible by 400
+
+    if (year % 400 === 0) {
+        return true;
+    } else if (year % 100 === 0) {
+        return false;
+    } else if (year % 4 === 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-console.log(isLeapYear(2000));
+// -----------
+
+const isLeapYear = function (year) {
+    return ((year % 4 === 0) && ( year % 100 !== 0 || year % 400 === 0 ));
+}
+
+console.log(isLeapYear(2000), true);
 console.log(isLeapYear(1900));
 console.log(isLeapYear(1996));
 console.log(isLeapYear(1997));
 console.log(isLeapYear(1992));
+
+// console.log(isLeapYear(year));
