@@ -19,34 +19,34 @@
 
 // VERSION 1: 
 
-const wordFilter = function (string) {
-    let output = '';
-    const outputArray = [];
-    const inputArray = string.split(' ');
+// const wordFilter = function (string) {
+//     let output = '';
+//     const outputArray = [];
+//     const inputArray = string.split(' ');
     
-    for (let i = 0; i < inputArray.length; i++) {
-        const word = inputArray[i];
-        if (outputArray.includes(word)) {
-            // console.log(`${word} is already included`);
-        } else {
-            // console.log(`${word} hasn't been included`);
-            outputArray.push(word);
-        }
-    };
+//     for (let i = 0; i < inputArray.length; i++) {
+//         const word = inputArray[i];
+//         if (!outputArray.includes(word)) {
+//             // console.log(`${word} hasn't already included`);
+//             outputArray.push(word);
+//         } else {
+//             // console.log(`${word} is already included`);
+//         }
+//     };
 
-    /////// forEach
-    // inputArray.forEach(word => {
-    //     if (outputArray.includes(word)) {
-    //         console.log(`${word} is already included`);
-    //     } else {
-    //         console.log(`${word} hasn't been included`);
-    //         outputArray.push(word);
-    //     }
-    // });
-    // console.log(outputArray);
-    output = outputArray.join(' ');
-    return output;
-}
+//     /////// forEach
+//     // inputArray.forEach(word => {
+//     //     if (outputArray.includes(word)) {
+//     //         console.log(`${word} is already included`);
+//     //     } else {
+//     //         console.log(`${word} hasn't been included`);
+//     //         outputArray.push(word);
+//     //     }
+//     // });
+//     // console.log(outputArray);
+//     output = outputArray.join(' ');
+//     return output;
+// }
 
 // VERSION 2: SET 
 // The Set object lets you store unique values
@@ -57,14 +57,14 @@ const wordFilter = function (string) {
     console.log(inputArray);
     
     const outputSet = new Set();
-    inputArray.map(word => outputSet.add(word));
+    inputArray.forEach(word => outputSet.add(word));
     console.log(outputSet);
 
     const outputArray = [];
     outputSet.forEach(word => outputArray.push(word));
     // outputSet.forEach(word => output += word + ' ');
     output = outputArray.join(' ');
-    console.log(output);
+    // console.log(output);
 
     return output;
 }
