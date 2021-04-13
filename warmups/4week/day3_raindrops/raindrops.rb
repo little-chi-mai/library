@@ -38,7 +38,7 @@ def raindrops number
         raindrops_str = number.to_s
     end
 
-    raindrops_str
+    p raindrops_str
 end
 
 
@@ -48,6 +48,8 @@ end
 # puts "input 34: #{raindrops(34)}"
 # puts "input 105: #{raindrops(105)}"
 
+# raindrops(6)
+# raindrops(10)
 
   
   def menu
