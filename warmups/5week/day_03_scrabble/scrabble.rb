@@ -52,9 +52,10 @@ class Scrabble
             'z' => 10
         }
     end
+    
 
     #getter
-    def scrabble_score string
+    def score string
         total_score = 0
         string.split('').each do |char|
             total_score += @scores[char]
@@ -67,5 +68,7 @@ class Scrabble
 end
 
 game = Scrabble.new
+
+game.score 'cabbage'
 
 binding.pry
