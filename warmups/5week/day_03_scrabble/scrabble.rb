@@ -58,7 +58,7 @@ class Scrabble
     def score string
         total_score = 0
         string.split('').each do |char|
-            total_score += @scores[char]
+            total_score += @scores[char.downcase]
         end
         p total_score
         p "The score of the word #{string} is #{total_score}."
