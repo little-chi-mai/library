@@ -15,19 +15,19 @@ console.log('Lala');
 // toCamelCase( 'Mama-mia' ) // => 'MamaMia'
 // toCamelCase( 'A_b_c' ) // => 'ABC'
 
-const toCamelCase = function(string) {
-    let result = string.split('');
-    // console.log(result);
+// const toCamelCase = function(string) {
+//     let result = string.split('');
+//     // console.log(result);
 
-    for (let i = 0; i < result.length; i++) {
-        const char = result[i];
-        if (char === '-' || char === '_') {
-            result.splice(i, 1); // remove 1 element at index i
-            result[i] = result[i].toUpperCase();
-        }
-    }
-    return result.join('');
-}
+//     for (let i = 0; i < result.length; i++) {
+//         const char = result[i];
+//         if (char === '-' || char === '_') {
+//             result.splice(i, 1); // remove 1 element at index i
+//             result[i] = result[i].toUpperCase();
+//         }
+//     }
+//     return result.join('');
+// }
 
 
 const toCamelCase = function(string) {
@@ -48,10 +48,11 @@ const toCamelCase = function(string) {
 }
 
 
+
 const toCamelCase = function (str) {
     return str.replace(/[_-]\w/g, function(match) {
     //   return match.charAt(1).toUpperCase();
-      return match[1].toUpperCase();
+      return match[match.length - 1].toUpperCase();
     });
 }
 

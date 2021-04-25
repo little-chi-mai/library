@@ -32,7 +32,7 @@ minimax_sum [1, 9, 5, 3, 7]
 # BONUS
 
 def minimax_sum arr, num
-    sorted_arr = arr.sort
+    p sorted_arr = arr.sort
     min_sum = sorted_arr.take(num).inject(&:+)
     max_sum = sorted_arr.drop(arr.size - num).inject(&:+)
     puts "min_sum: #{min_sum}; max_sum: #{max_sum}"
