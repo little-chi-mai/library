@@ -32,6 +32,7 @@ scorecard: {
   128: "cats"
 }
 ```
-*Start with creating the program with standalone functions then create an object to store it all. You can start with an object if you're up for it* `:)`
+
+_Start with creating the program with standalone functions then create an object to store it all. You can start with an object if you're up for it_ `:)`
 
 **Hint**: You'll need to reverse the object but objects aren't ordered??????
