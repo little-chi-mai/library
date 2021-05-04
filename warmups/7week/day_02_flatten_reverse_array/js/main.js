@@ -20,7 +20,7 @@
 // Make one that flattens any array that you pass into it: ` ["Hello", [[["World"], 42]]] ` -> `[ "Hello", "World", 42 ]`
 
 const reverse = function (array) {
-    resultArray = [];
+    let resultArray = [];
     array.forEach(element => {
         resultArray.unshift(element);
     });
@@ -30,7 +30,7 @@ const reverse = function (array) {
 reverse( [1, 2, 3, 4] );
 
 const flatten = function (array) {
-    resultArray = [];
+    let resultArray = [];
 
     array.forEach(element => {
         if (!Array.isArray(element)) {
@@ -46,7 +46,7 @@ const flatten = function (array) {
 flatten( ["Hello", ["World", 42] ] );
 
 const flattenMultiple = function (array, flattenedArray = []) {
-    resultArray = flattenedArray;
+    let resultArray = flattenedArray;
 
     array.forEach(element => {
         if (!Array.isArray(element)) {
