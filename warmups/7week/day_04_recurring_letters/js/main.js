@@ -25,17 +25,22 @@
 
 const recurringLetter = function(string) {
 
-  let counts = _(string).countBy();
-  // console.log(_(counts).omit(' ')); 
-  counts = _(counts).omit(' ');
+  // countBy() will count the letter that appears in the string and put them in a object
+  let letterCounts = _(string).countBy();
+  console.log(letterCounts);
 
-  // const maxScore = _.max(_.values(counts));
-  const maxScore = _.max(counts);
-  console.log(maxScore);
+  // Exclude the space from the object result
+  counts = _(letterCounts).omit(' ');
+
+  // Find maxScore 
+  // const maxScore = _.max(_.values(letterCounts));
+  const maxScore = _.max(letterCounts);
+  // console.log(maxScore);
 
   let maxLetter = '';
   
-  _(counts).map((value, letter) => {
+  // 
+  _(letterCounts).map((value, letter) => {
     console.log(value, letter);
     if (letter !== ' ' && value === maxScore) {
       console.log('MAXLETTER', maxLetter);
