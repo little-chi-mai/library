@@ -53,6 +53,15 @@ const romanConverter = function(number) {
   let result = '';
 
   const sortedKeys = Object.keys(romanNumbers).sort((a, b) => b - a);
+  .sort((a, b) {
+    if (a > b) {
+      return 1;
+    } else if (a < b) {
+      return -1;
+    } else {
+      return 0;
+    }
+  })
   // const sortedKeys = _.sortBy(_.keys(romanNumbers).map(num => parseInt(num))).reverse();
 
   console.log(sortedKeys);
