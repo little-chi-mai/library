@@ -12,14 +12,15 @@
 
 def jumping_on_clouds arr
     jump_count = 1
+    # create a duplicated array
     jump_arr = arr.dup
-    jump_arr[0] = 'J'
-    jump_arr[-1] = 'E'
+    # mark the first cloud as the first jump
+    jump_arr[0] = 'J' #jump
+    #mark the last loud as the last jump
+    jump_arr[-1] = 'E' #end
     p jump_arr
 
     jump_arr.map.with_index do |cloud, i|
-        # p cloud_next1 = jump_arr[i + 1]
-        # p cloud_next2 = jump_arr[i + 2]
         if cloud == 'J'
             if jump_arr[i + 2] == 0 
                 jump_arr[i + 2] = 'J'
