@@ -24,34 +24,37 @@
 const wordyCalculator = function(question) {
   let result = 0;
 
-  let p = /(-?\d+) (minus|multiplied by|plus|divided by) (-?\d+)/;
-  // let p = /(-?\d+)\s+(minus|multiplied by|plus|divided by)\s+(-?\d+)/;
-  let matches = question.toLowerCase().match(p);
-  console.log(matches);
+  // let p = /(-?\d+) (minus|multiplied by|plus|divided by) (-?\d+)/i;
+  let p = /(-?\d+)\s+(minus|multiplied by|plus|divided by)\s+(-?\d+)/i;
+  let matches = question.match(p);
 
   if (!matches) return "Invalid question";
-
-  const [match, a, operator, b] = matches;
+  // const [match, num1, operator, num2] = matches;
   console.log(matches);
-  console.log(matches[0]);
-  console.log(matches[1]);
-  console.log(matches[2]);
-  console.log(matches[3]);
+  // console.log(matches[0]);
+  const a = parseInt(matches[1]);
+  const b = parseInt(matches[3]);
+  const operator = matches[2].toLowerCase();
+  console.log(a);
+  console.log(operator);
+  console.log(b);
 
-  if (operator === "minus") {
-    console.log("MINUS");
-    result = parseInt(a) - parseInt(b);
-  } else if (operator === "plus") {
+  if (operator === "plus") {
     console.log("PLUS");
-    result = parseInt(a) + parseInt(b);
+    result = a + b;
+  } else if (operator === "minus") {
+    console.log("MINUS", parseInt(a), parseInt(b));
+    result = a - b;
+
   } else if (operator === "multiplied by") {
     console.log("multiplied by");
-    result = parseInt(a) * parseInt(b);
+    result = a * b;
   } else if (operator === "divided by") {
     console.log("divided by");
-    result = parseInt(a) / parseInt(b);
+    result = a / b;
   }
   console.log('result', result);
+  return result;
 }
 wordyCalculator('What is 7 Minus   5?');
 wordyCalculator('What is 5 plus 13?');
