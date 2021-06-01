@@ -41,38 +41,47 @@ const letters = [
 
 const cipher = function(string, num, encrypt = true) {
   let result = [];
-  string.split('').forEach(element => {
+  string.split('').forEach(char => {
     let newIndex = 0;
-    let isCapitalLetter = false;
-    let lowerCase = element.toLowerCase();
+    let lowerCaseChar = char.toLowerCase();
 
-    if (element !== lowerCase) {
-      isCapitalLetter = true;
-    }
-    if (letters.indexOf(lowerCase) >= 0) {
+    if (letters.indexOf(lowerCaseChar) >= 0) {
       // if (encrypt) {
-        newIndex = letters.indexOf(lowerCase) + num;
+        newIndex = letters.indexOf(lowerCaseChar) + num;
         if (newIndex > letters.length - 1) {
           newIndex -= letters.length;
         }
       // } else {
-      //   newIndex = letters.indexOf(lowerCase) - num;
+      //   newIndex = letters.indexOf(lowerCaseChar) - num;
       //   if (newIndex < 0) {
       //     newIndex += letters.length;
       //   }
       // }
-      
-      if (isCapitalLetter) {
+
+      // check if the char is capital
+      if (char !== lowerCaseChar) {
         result.push(letters[newIndex].toUpperCase());
       } else {
         result.push(letters[newIndex]);
       }
+      // not a letter
     } else {
-      result.push(element);
+      result.push(char);
     }
   });
-  console.log(result.join(''));
+  // console.log(result.join(''));
+  return result.join('');
 }
 
 cipher("Joel is great!!!", 3, true)
 cipher("Mrho lv juhdw!!!", 3, false)
+
+const bruteDeCipher = (string) => {
+  const list = []
+  for (let i = 0; i < 26; i++){
+    list.push(cipher(string, i, false))
+  }
+  // console.log(list);
+  return list;
+}
+console.table(bruteDeCipher("Mrho lv juhdw!!!"))
