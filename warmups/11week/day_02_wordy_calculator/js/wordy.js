@@ -57,8 +57,8 @@ const wordyCalculator = function(question) {
   return result;
 }
 wordyCalculator('What is 7 Minus   5?');
-wordyCalculator('What is 5 plus 13?');
-wordyCalculator('What is -6 multiplied by 4?');
-wordyCalculator('What is 25 divided by -5?');
+// wordyCalculator('What is 5 plus 13?');
+// wordyCalculator('What is -6 multiplied by 4?');
+// wordyCalculator('What is 25 divided by -5?');
 
 

@@ -20,7 +20,8 @@ const findMatch = function(array, sum) {
       }
     }
   }
-  console.log(result);
+  // console.log(result);
+  // return result;
 }
 
-console.log(findMatch([3, 5, 1, 4], 10));
+console.log(findMatch([3, 5, 1, 4], 9));

@@ -118,7 +118,7 @@ const pairwise = function(array, number) {
   let sumIndices = 0;
   array.forEach((arrayNum, index) => {
     // numToFindObj includes arrayNum
-    if (numToFindObj[arrayNum] >= 0) {
+    if (numToFindObj.hasOwnProperty(arrayNum)) {
       indices.push([numToFindObj[arrayNum], index]);
       sumIndices += numToFindObj[arrayNum] + index;
       console.log(`There is a pair at indices: [${numToFindObj[arrayNum]}, ${index}]`);

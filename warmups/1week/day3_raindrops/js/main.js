@@ -27,7 +27,7 @@ const raindrops = function( number ) {
     // Let check the first condition.
     // To check whether 3 is a factor of a number, we use a operator called modulo. 
     // It returns the remainder of a division.
-    // So if the remainder equal to 0, 3 is a factor of that number.
+    // So if the remainder equal to 0, 3 is a factor of that number // or that number is divisible by 3
     // and if the remainder is not equal to 0, 3 is not a factor.
     // The symbol of modulo in JS is %
 

@@ -22,6 +22,7 @@ const sum = function (arr1, arr2) {
 
 const sumMultiple = function () {
     let result = 0;
+    console.log(arguments);
 
     for (let i = 0; i < arguments.length; i++) {
         const arr = arguments[i];
